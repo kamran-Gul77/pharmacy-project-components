@@ -2,15 +2,6 @@ import Avatar from "@/components/elements/Avatar";
 import { Heading } from "@/components/typography/heading";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import imgg from "../../public/next.svg";
 export default function Home() {
   return (
@@ -73,62 +64,6 @@ export default function Home() {
               <path d="m21 21-4.35-4.35" />
             </svg>
           </div>
-        </div>
-      </div>
-      {/* slectc */}
-      <div className="space-y-6">
-        <div>
-          <Heading level="h4" className="mb-3">
-            Basic Select
-          </Heading>
-          <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Select an option" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="option1">Option 1</SelectItem>
-              <SelectItem value="option2">Option 2</SelectItem>
-              <SelectItem value="option3">Option 3</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div>
-          <Heading level="h4" className="mb-3">
-            With Groups
-          </Heading>
-          <Select>
-            <SelectTrigger>
-              <SelectValue placeholder="Select a fruit" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                <SelectItem value="apple">Apple</SelectItem>
-                <SelectItem value="banana">Banana</SelectItem>
-                <SelectItem value="orange">Orange</SelectItem>
-              </SelectGroup>
-              <SelectGroup>
-                <SelectLabel>Vegetables</SelectLabel>
-                <SelectItem value="carrot">Carrot</SelectItem>
-                <SelectItem value="broccoli">Broccoli</SelectItem>
-                <SelectItem value="spinach">Spinach</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div>
-          <Heading level="h4" className="mb-3">
-            Disabled
-          </Heading>
-          <Select disabled>
-            <SelectTrigger>
-              <SelectValue placeholder="Select an option" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="option1">Option 1</SelectItem>
-            </SelectContent>
-          </Select>
         </div>
       </div>
     </div>

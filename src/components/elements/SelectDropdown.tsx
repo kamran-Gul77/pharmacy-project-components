@@ -1,65 +1,78 @@
 "use client";
+
+import React from "react";
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
+} from "../ui/select";
+
+import {
+  SelectProps,
+  SelectTriggerProps,
+  SelectContentProps,
+  SelectGroupProps,
+  SelectItemProps,
+  SelectLabelProps,
+} from "@radix-ui/react-select";
 
 interface Option {
   value: string;
   label: string;
 }
 
-interface SimplifiedSelectProps {
+interface SelectDropdownProps
+  extends Omit<SelectProps, "onValueChange" | "value"> {
   options: Option[];
+  value?: string;
+  onChange: (value: string) => void;
   label?: string;
   placeholder?: string;
-  value?: string;
-  onChange?: (value: string) => void;
-  disabled?: boolean;
-  helperText?: string;
-  id?: string;
-  className?: string;
-  triggerClassName?: string;
+  selectTriggerProps?: SelectTriggerProps;
+  selectContentProps?: SelectContentProps;
+  selectGroupProps?: SelectGroupProps;
+  selectItemProps?: Partial<SelectItemProps>; // partial because each item might not need all props
+  selectLabelProps?: SelectLabelProps;
 }
 
-const SelectDropdown = ({
+const SelectDropdown: React.FC<SelectDropdownProps> = ({
   options,
-  label,
-  placeholder = "Select an option",
   value,
   onChange,
-  disabled,
-  helperText,
-  id,
-  className,
-  triggerClassName,
-}: SimplifiedSelectProps) => {
-  // Generate a unique ID if not provided
-  const selectId = id || `select-${Math.random().toString(36).substring(2, 9)}`;
-
+  label,
+  placeholder = "Select an option",
+  selectTriggerProps,
+  selectContentProps,
+  selectGroupProps,
+  selectItemProps,
+  selectLabelProps,
+  ...selectProps
+}) => {
   return (
-    <div className={`grid w-full items-center gap-1.5 ${className}`}>
-      {label && <Label htmlFor={selectId}>{label}</Label>}
-      <Select value={value} onValueChange={onChange} disabled={disabled}>
-        <SelectTrigger id={selectId} className={triggerClassName}>
-          <SelectValue placeholder={placeholder} />
-        </SelectTrigger>
-        <SelectContent>
+    <Select value={value} onValueChange={onChange} {...selectProps}>
+      <SelectTrigger {...selectTriggerProps}>
+        <SelectValue placeholder={placeholder} />
+      </SelectTrigger>
+      <SelectContent {...selectContentProps}>
+        <SelectGroup {...selectGroupProps}>
+          {label && <SelectLabel {...selectLabelProps}>{label}</SelectLabel>}
           {options.map((option) => (
-            <SelectItem key={option.value} value={option.value}>
+            <SelectItem
+              key={option.value}
+              value={option.value}
+              {...selectItemProps}
+            >
               {option.label}
             </SelectItem>
           ))}
-        </SelectContent>
-      </Select>
-      {helperText && (
-        <p className="text-sm text-muted-foreground">{helperText}</p>
-      )}
-    </div>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 };
+
 export default SelectDropdown;

@@ -1,11 +1,22 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import icon from "../../../public/globe.svg";
 import { LucideStar } from "lucide-react";
 import Button from "@/components/ui/button";
 import Image from "next/image";
+import Select from "react-select";
+
+import SelectDropdown from "@/components/elements/SelectDropdown";
 const GlobeIcon = () => <Image src={icon} alt="Globe" width={16} height={16} />;
-const page = () => {
+
+const Page = () => {
+  const [singleFruit, setSingleFruit] = useState<string>("");
+  const options = [
+    { value: "chocolate", label: "Chocolate" },
+    { value: "strawberry", label: "Strawberry" },
+    { value: "vanilla", label: "Vanilla" },
+  ];
+
   return (
     <div>
       <div className="flex flex-col gap-10 p-10">
@@ -82,9 +93,26 @@ const page = () => {
             Ghost + Gooey Right
           </Button>
         </div>
+        <div>kamiiiiiiiiiiiiiiiiiii</div>
+        <div className="flex flex-col gap-10 p-10">
+          {/* Single Selection */}
+          <Select options={options} isMulti />
+          <SelectDropdown
+            value={singleFruit}
+            onChange={(val) => setSingleFruit(val as string)}
+            label="Pick a Fruit"
+            placeholder="Choose one fruit"
+            options={[
+              { value: "apple", label: "Apple" },
+              { value: "banana", label: "Banana" },
+              { value: "orange", label: "Orange" },
+            ]}
+            selectTriggerProps={{ className: "w-64" }}
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;
