@@ -1,11 +1,11 @@
 import icon from "./../../public/globe.svg";
 
 export const sidebarData = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
+  // user: {
+  //   name: "shadcn",
+  //   email: "m@example.com",
+  //   avatar: icon,
+  // },
   navMain: [
     {
       title: "Dashboard",

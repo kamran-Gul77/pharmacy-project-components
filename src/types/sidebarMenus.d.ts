@@ -11,6 +11,6 @@ interface User {
 }
 
 export interface siderbarMenus {
-  user: User;
+  user?: User;
   navMain: NavItem[];
 }
