@@ -1,6 +1,5 @@
 import Avatar from "@/components/elements/Avatar";
 import { Heading } from "@/components/typography/heading";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -22,49 +21,6 @@ export default function Home() {
         <Avatar src={imgg.src} fallback="sda" />
       </div>
       {/* button */}
-
-      <div className="space-y-6">
-        <div>
-          <Heading level="h4" className="mb-3">
-            Variants
-          </Heading>
-          <div className="flex flex-wrap gap-3">
-            <Button variant="default">Default</Button>
-            <Button variant="destructive">Destructive</Button>
-            <Button variant="outline">Outline</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="ghost">Ghost</Button>
-            <Button variant="link">Link</Button>
-          </div>
-        </div>
-
-        <div>
-          <Heading level="h4" className="mb-3">
-            Sizes
-          </Heading>
-          <div className="flex flex-wrap items-center gap-3">
-            <Button size="default">Default</Button>
-            <Button size="sm">Small</Button>
-            <Button size="lg">Large</Button>
-            <Button size="icon" className="h-9 w-9">
-              <span className="font-bold">A</span>
-            </Button>
-          </div>
-        </div>
-
-        <div>
-          <Heading level="h4" className="mb-3">
-            States
-          </Heading>
-          <div className="flex flex-wrap gap-3">
-            <Button>Default</Button>
-            <Button disabled>Disabled</Button>
-            <Button variant="outline" className="bg-primary/10">
-              Active
-            </Button>
-          </div>
-        </div>
-      </div>
 
       {/* inputss */}
       <div className="space-y-6">

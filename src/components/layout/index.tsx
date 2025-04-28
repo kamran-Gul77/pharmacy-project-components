@@ -18,7 +18,6 @@ const Layout: React.FC<LayoutProps> = ({ siderbarMenus, children }) => {
     >
       <AppSidebar variant="sidebar" siderbarMenus={siderbarMenus} />
       <SidebarInset>
-        <div>our header goes here</div>
         <div className="p-4">{children}</div>
       </SidebarInset>
     </SidebarProvider>

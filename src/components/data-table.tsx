@@ -55,7 +55,6 @@ import { z } from "zod";
 
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   ChartConfig,
   ChartContainer,
@@ -100,6 +99,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Button from "./ui/button";
 
 export const schema = z.object({
   id: z.number(),

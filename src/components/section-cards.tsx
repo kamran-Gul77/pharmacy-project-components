@@ -34,22 +34,30 @@ export const StatCard: FC<StatCardProps> = ({
   return (
     <Card className="@container/card" data-slot="card">
       <CardHeader>
-        <CardDescription>{title}</CardDescription>
-        <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-          {value}
-        </CardTitle>
-        <CardAction>
-          <Badge variant="outline">
-            <TrendIcon />
-            {badgeValue}
-          </Badge>
-        </CardAction>
+        {title && <CardDescription>{title}</CardDescription>}
+        {value && (
+          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+            {value}
+          </CardTitle>
+        )}
+        {badgeValue && (
+          <CardAction>
+            <Badge variant="outline">
+              <TrendIcon />
+              {badgeValue}
+            </Badge>
+          </CardAction>
+        )}
       </CardHeader>
       <CardFooter className="flex-col items-start gap-1.5 text-sm">
-        <div className="line-clamp-1 flex gap-2 font-medium">
-          {footerPrimary} <TrendIcon className="size-4" />
-        </div>
-        <div className="text-muted-foreground">{footerSecondary}</div>
+        {footerPrimary && (
+          <div className="line-clamp-1 flex gap-2 font-medium">
+            {footerPrimary} <TrendIcon className="size-4" />
+          </div>
+        )}
+        {footerSecondary && (
+          <div className="text-muted-foreground">{footerSecondary}</div>
+        )}
       </CardFooter>
     </Card>
   );
