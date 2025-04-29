@@ -4,9 +4,9 @@ import icon from "../../../public/globe.svg";
 import { LucideStar } from "lucide-react";
 import Button from "@/components/ui/button";
 import Image from "next/image";
-import Select from "react-select";
 
 import SelectDropdown from "@/components/elements/SelectDropdown";
+import CustomSelect from "@/components/elements/CustomSelect";
 const GlobeIcon = () => <Image src={icon} alt="Globe" width={16} height={16} />;
 
 const Page = () => {
@@ -96,7 +96,7 @@ const Page = () => {
         <div>kamiiiiiiiiiiiiiiiiiii</div>
         <div className="flex flex-col gap-10 p-10">
           {/* Single Selection */}
-          <Select options={options} isMulti />
+          <CustomSelect options={options} />
           <SelectDropdown
             value={singleFruit}
             onChange={(val) => setSingleFruit(val as string)}
