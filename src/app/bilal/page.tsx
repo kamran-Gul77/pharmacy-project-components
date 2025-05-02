@@ -32,7 +32,15 @@ import {
 } from "@/components/elements/Notifications";
 import { SNDataTable } from "@/components/table/SNDataTable";
 import Button from "@/components/ui/button";
-const Page = () => {
+
+export interface Payment {
+  id: string;
+  amount: number;
+  status: "pending" | "processing" | "success" | "failed";
+  email: string;
+}
+
+const Page: React.FC = () => {
   // This type is used to define the shape of our data.
   // You can use a Zod schema here if you want.
   const menuItems: ContextMenuItemType[] = [
@@ -127,13 +135,6 @@ const Page = () => {
       ),
     },
   ];
-
-  interface Payment {
-    id: string;
-    amount: number;
-    status: "pending" | "processing" | "success" | "failed";
-    email: string;
-  }
 
   const data: Payment[] = [
     {
