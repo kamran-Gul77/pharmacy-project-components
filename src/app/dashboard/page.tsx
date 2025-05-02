@@ -22,7 +22,7 @@ const cardsData: {
     badgeValue: "+12.5%",
     trend: "up",
     footerPrimary: "Trending up this month",
-    footerSecondary: "Visitors for the last 6 months",
+    footerSecondary: "Visitorss for the last 6 months",
   },
   {
     title: "New Customers",
