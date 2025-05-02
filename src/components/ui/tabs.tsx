@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-"use client"
-
-import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs"
-
-import { cn } from "@/lib/utils"
-=======
 "use client";
 
 import * as React from "react";
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 
 import { cn } from "@/lib/utils";
->>>>>>> eb7a022ac21632507c16470fa6f3d5e6ee6d3fea
 
 function Tabs({
   className,
@@ -24,11 +15,7 @@ function Tabs({
       className={cn("flex flex-col gap-2", className)}
       {...props}
     />
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> eb7a022ac21632507c16470fa6f3d5e6ee6d3fea
 }
 
 function TabsList({
@@ -44,11 +31,7 @@ function TabsList({
       )}
       {...props}
     />
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> eb7a022ac21632507c16470fa6f3d5e6ee6d3fea
 }
 
 function TabsTrigger({
@@ -64,11 +47,7 @@ function TabsTrigger({
       )}
       {...props}
     />
-<<<<<<< HEAD
-  )
-=======
   );
->>>>>>> eb7a022ac21632507c16470fa6f3d5e6ee6d3fea
 }
 
 function TabsContent({
@@ -81,14 +60,7 @@ function TabsContent({
       className={cn("flex-1 outline-none", className)}
       {...props}
     />
-<<<<<<< HEAD
-  )
-}
-
-export { Tabs, TabsList, TabsTrigger, TabsContent }
-=======
   );
 }
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };
->>>>>>> eb7a022ac21632507c16470fa6f3d5e6ee6d3fea
