@@ -51,7 +51,6 @@ import {
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
@@ -82,6 +81,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import Button from "../ui/button";
 
 // DragHandle component for row reordering
 function DragHandle({ id }: { id: React.Key }) {

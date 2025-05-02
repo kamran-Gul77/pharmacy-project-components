@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
 import React, { useEffect } from "react";
@@ -32,6 +31,7 @@ import {
   Notifications,
 } from "@/components/elements/Notifications";
 import { SNDataTable } from "@/components/table/SNDataTable";
+import Button from "@/components/ui/button";
 const Page = () => {
   // This type is used to define the shape of our data.
   // You can use a Zod schema here if you want.
