@@ -1,11 +1,11 @@
 import { Bell } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import Button from "../ui/button";
 export interface NotificationItem {
   message: string;
 }
