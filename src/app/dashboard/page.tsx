@@ -1,6 +1,7 @@
+"use client";
+import React from "react";
 import { ChartAreaInteractive } from "@/components/chart-area-interactive";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
-
 import data from "./data.json";
 import AppSidebar from "@/components/app-sidebar";
 import { sidebarData } from "@/lib/sidebarMenu";
@@ -161,7 +162,12 @@ export default function Page() {
             <div className="px-4 lg:px-6">
               <ChartAreaInteractive />
             </div>
-            <SNDataTable idField="id" columns={columns} data={data} />
+            <SNDataTable
+              enablePagination
+              idField="id"
+              columns={columns}
+              data={data}
+            />
           </div>
         </div>
       </SidebarInset>
