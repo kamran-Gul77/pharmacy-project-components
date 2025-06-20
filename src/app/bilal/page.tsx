@@ -377,6 +377,15 @@ const Page = () => {
 
   return (
     <div className="p-4">
+      <div className="flex gap-2 items-center mb-8">
+        <Button variant={"secondary"}>Library </Button>
+        <Button variant={"ghost"}>Library </Button>
+        <Button variant={"destructive"}>Library </Button>
+        <Button variant={"link"} size={"icon"}>
+          Library{" "}
+        </Button>
+      </div>
+
       <div className="flex gap-2 items-center mt-8 mb-8">
         <input
           value={searchQuery}
