@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import SelectDropdown from "@/components/elements/SelectDropdown";
 import CustomSelect from "@/components/elements/CustomSelect";
+import UILaoding from "@/Loading/UILaoding";
 const GlobeIcon = () => <Image src={icon} alt="Globe" width={16} height={16} />;
 
 const Page = () => {
@@ -19,6 +20,10 @@ const Page = () => {
 
   return (
     <div>
+      <UILaoding />
+      <UILaoding />
+      <UILaoding />
+      <UILaoding />
       <div className="flex flex-col gap-10 p-10">
         {/* Variants */}
         <div className="flex flex-wrap gap-4">
